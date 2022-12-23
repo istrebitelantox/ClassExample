@@ -1,6 +1,6 @@
-package study;
+package ModificatorsAndIncapsulation;
 
-public class Incaaps {
+public class Incaps {
     public static void main(String[] args){
         Person2 yuri=new Person2("Юрий",19);
         System.out.println(yuri.getAge());

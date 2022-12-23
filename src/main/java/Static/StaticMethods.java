@@ -1,4 +1,4 @@
-package study;
+package Static;
 
 
 public class StaticMethods{

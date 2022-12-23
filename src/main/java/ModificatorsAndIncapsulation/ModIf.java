@@ -1,4 +1,4 @@
-package study;
+package ModificatorsAndIncapsulation;
 
 public class ModIf {
     public static void main(String[] args){
