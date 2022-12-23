@@ -1,5 +1,7 @@
 package EnumClass;
 
+import java.security.PublicKey;
+
 public class EnumExampleClass {
     public static void main(String[] args) {
 
@@ -26,13 +28,40 @@ public class EnumExampleClass {
         for(Type1 s: types){
             System.out.println(s);
         }
+        System.out.println(Color.RED.getCode());
+        System.out.println(Color.GREEN.getCode());
+
+        Operation op = Operation.SUM;
+        System.out.println(op.action(10, 4));
+        op = Operation.MULTIPLY;
+        System.out.println(op.action(6, 4));
     }
+}
+enum Operation{
+    SUM{
+        public int action(int x, int y){ return x + y;}
+    },
+    SUBTRACT{
+        public int action(int x, int y){ return x - y;}
+    },
+    MULTIPLY{
+        public int action(int x, int y){ return x * y;}
+    };
+    public abstract int action(int x, int y);
 }
 enum Type1{
     SCIENCE,
     BELLETRE,
     PHANTASY,
     SCIENCE_FICTION
+}
+enum Color{
+    RED("#FF0000"), BLUE("#0000FF"), GREEN("#00FF00");
+    private String code;
+    Color(String code){
+        this.code = code;
+    }
+    public String getCode(){ return code;}
 }
 enum Day{
 
